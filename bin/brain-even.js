@@ -1,7 +1,11 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+import { greeting } from '../src/even.js';
 
-const answer = 'Answer "yes" if the number is even, otherwise answer "no".'
+// console.log(`Hello, ${userName}!`);
+
+// console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+// console.log(getRandomIntInclusive());
+
+greeting();
