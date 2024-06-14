@@ -15,6 +15,12 @@ export default [
   ...compat.extends("airbnb"),
   {
   rules: {
+    'no-underscore-dangle': [
+        'error',
+        {
+          allow: ['__filename', '__dirname'],
+        },
+      ],
     'import/extensions': [
       'error',
       {
