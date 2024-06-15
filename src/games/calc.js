@@ -14,26 +14,24 @@ export const gamesCalc = () => {
 		console.log('Question: ', mathExpression);
 		const answerUser = readlineSync.question('Your answer: ');
 
-		const answerCorrectSum = (number1 + number2);
-		const answerCorrectMinus = (number1 - number2);
-		const answerCorrectMilti = (number1 * number2);
-
-
-		let opposite;
-			if (answerUser != answerCorrectSum && answerUser != answerCorrectMinus) {
-				opposite = answerCorrectMilti;
-			} else if (answerUser != answerCorrectMilti && answerUser != answerCorrectSum ) {
-				opposite = answerCorrectMinus;
-			} else {
-				opposite = answerCorrectSum;
-			} if (answerCorrectSum == answerUser || answerCorrectMinus == answerUser || answerCorrectMilti == answerUser) {
-			console.log('Correct!');
-		} else {
-			console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${opposite}'.`);
-			console.log(`Let's try again, ${name}!`);
-			return;
-		}
+		let correctAnswer;
+      switch (getRandomSymbol) {
+      case '+':
+         correctAnswer = number1 + number2 ;
+			console.log((correctAnswer == answerUser) ? `'Correct!'` : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+			break;
+      case '-':
+         correctAnswer = number1 - number2;
+			console.log((correctAnswer == answerUser) ? `'Correct!'` : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+			break;
+      case '*':
+			correctAnswer = number1 * number2;
+			console.log((correctAnswer == answerUser) ? `'Correct!'` : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+			break;
+	} if (correctAnswer != answerUser) {
+		return (`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
 	}
-	console.log(`Congratulations, ${name}!`);
+	}
+	console.log(`Congratulations, ${name}!`);5
 };
 export default gamesCalc;
