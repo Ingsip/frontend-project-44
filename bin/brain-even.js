@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { greeting } from '../src/games/even.js';
+import { runGame } from '../src/games/even.js';
 
 // console.log(`Hello, ${userName}!`);
 
@@ -8,4 +8,4 @@ import { greeting } from '../src/games/even.js';
 
 // console.log(getRandomIntInclusive());
 
-greeting();
+runGame();

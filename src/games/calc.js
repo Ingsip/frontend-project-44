@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import { greeting, getRandomNumber } from '../index.js';
+import { runGame, getRandomNumber } from '../index.js';
 import _ from 'lodash';
 
-export const gamesCalc = () => {
-	const name = greeting();
+export const gameCalc = () => {
+	const name = runGame();
 	console.log('What is the result of the expression?');
 
 	for (let i = 0; i < 3; i += 1) {
@@ -34,4 +34,4 @@ export const gamesCalc = () => {
 	}
 	console.log(`Congratulations, ${name}!`);5
 };
-export default gamesCalc;
+export default gameCalc;
