@@ -32,6 +32,6 @@ export const gameCalc = () => {
       return (`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     }
   }
-  console.log(`Congratulations, ${name}!`); 5;
+  console.log(`Congratulations, ${name}!`);
 };
 export default gameCalc;

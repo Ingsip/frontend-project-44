@@ -10,13 +10,13 @@ export const runGame = () => {
     console.log('Question: ', number);
     const answerUser = readlineSync.question('Your answer: ');
 
-    const isEven = (number) => number % 2 === 0;
-    const answerCorrect = isEven(number) ? 'yes' : 'no';
-    const opposite = answerUser === 'yes' ? 'no' : 'yes';
-    if (answerCorrect === answerUser) {
+    //const isEven = (number) => number % 2 === 0;
+    const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
+    //const opposite = answerUser === 'yes' ? 'no' : 'yes';
+    if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${opposite}'.`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
