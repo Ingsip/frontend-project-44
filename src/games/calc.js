@@ -28,10 +28,11 @@ export const gameCalc = () => {
         correctAnswer = (number1 * number2).toString();
         console.log((correctAnswer === answerUser) ? '\'Correct!\'' : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
         break;
+      default:
     } if (correctAnswer !== answerUser) {
       return (`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  return console.log(`Congratulations, ${name}!`);
 };
 export default gameCalc;
