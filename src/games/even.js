@@ -7,7 +7,7 @@ export const evenGame = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const number = String(getRandomNumber(1, 20));
-    console.log('Question: ', number);
+    console.log(`Question: ${number}`);
     const answerUser = readlineSync.question('Your answer: ');
     const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
 
