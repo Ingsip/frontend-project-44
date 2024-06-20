@@ -23,8 +23,7 @@ export const gcdGame = () => {
     if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }

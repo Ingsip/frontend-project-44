@@ -5,7 +5,6 @@ import { startGame, getRandomNumber } from '../index.js';
 export const gameCalc = () => {
   const name = startGame();
   console.log('What is the result of the expression?');
-
   for (let i = 0; i < 3; i += 1) {
     const number1 = getRandomNumber(1, 10);
     const number2 = getRandomNumber(1, 20);
