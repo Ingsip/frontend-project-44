@@ -10,7 +10,7 @@ export const evenGame = () => {
     console.log('Question: ', number);
     const answerUser = readlineSync.question('Your answer: ');
     const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
-    
+
     if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
