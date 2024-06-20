@@ -9,8 +9,7 @@ export const gameCalc = () => {
     const number1 = getRandomNumber(1, 10);
     const number2 = getRandomNumber(1, 20);
     const getRandomSymbol = _.sample(['+', '-', '*']);
-    const mathExpression = `${number1} ${getRandomSymbol} ${number2}`;
-    console.log(`Question: ${mathExpression}`);
+    console.log(`Question: ${number1} ${getRandomSymbol} ${number2}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     let correctAnswer;
