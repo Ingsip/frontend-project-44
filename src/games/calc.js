@@ -7,8 +7,8 @@ export const gameCalc = () => {
   console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
-    const number1 = getRandomNumber();
-    const number2 = getRandomNumber();
+    const number1 = getRandomNumber(1, 10);
+    const number2 = getRandomNumber(1, 20);
     const getRandomSymbol = _.sample(['+', '-', '*']);
     const mathExpression = `${number1} ${getRandomSymbol} ${number2}`;
     console.log('Question: ', mathExpression);

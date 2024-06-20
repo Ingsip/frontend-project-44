@@ -6,7 +6,7 @@ export const evenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomNumber();
+    const number = getRandomNumber(1, 20);
     console.log('Question: ', number);
     const answerUser = readlineSync.question('Your answer: ');
 
@@ -16,8 +16,7 @@ export const evenGame = () => {
     if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }
