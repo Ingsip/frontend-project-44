@@ -16,7 +16,7 @@ export const gcdGame = () => {
     const number1 = getRandomNumber(0, 50);
     const number2 = getRandomNumber(0, 50);
     const question = `${number1}  ${number2}`;
-    console.log('Question: ', question);
+    console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     const correctAnswer = nod(number1, number2).toString();

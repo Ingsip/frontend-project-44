@@ -17,7 +17,7 @@ export const gamePrime = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomNumber(1, 20);
-    console.log('Question: ', number);
+    console.log(`Question: ${number}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     const correctAnswer = (getPrime(number) === true) ? 'yes' : 'no';
