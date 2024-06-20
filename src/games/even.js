@@ -9,10 +9,8 @@ export const evenGame = () => {
     const number = getRandomNumber(1, 20);
     console.log('Question: ', number);
     const answerUser = readlineSync.question('Your answer: ');
-
-    // const isEven = (number) => number % 2 === 0;
     const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
-    // const opposite = answerUser === 'yes' ? 'no' : 'yes';
+    
     if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
