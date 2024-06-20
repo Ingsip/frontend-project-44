@@ -18,21 +18,21 @@ export const gameCalc = () => {
     switch (getRandomSymbol) {
       case '+':
         correctAnswer = (number1 + number2).toString();
-        console.log((correctAnswer === answerUser) ? '\'Correct!\'' : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
         break;
       case '-':
         correctAnswer = (number1 - number2).toString();
-        console.log((correctAnswer === answerUser) ? '\'Correct!\'' : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
         break;
       case '*':
         correctAnswer = (number1 * number2).toString();
-        console.log((correctAnswer === answerUser) ? '\'Correct!\'' : `'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
         break;
       default:
-    } if (correctAnswer !== answerUser) {
-      return (`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+    } if (correctAnswer === answerUser) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      return;
     }
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 export default gameCalc;
