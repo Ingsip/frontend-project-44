@@ -11,7 +11,7 @@ export const gameCalc = () => {
     const number2 = getRandomNumber(1, 20);
     const getRandomSymbol = _.sample(['+', '-', '*']);
     const mathExpression = `${number1} ${getRandomSymbol} ${number2}`;
-    console.log(`Question: ', ${mathExpression}`);
+    console.log(`Question: ${mathExpression}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     let correctAnswer;
