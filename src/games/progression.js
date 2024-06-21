@@ -29,12 +29,12 @@ export const gameProgression = () => {
     progression[randomIndex] = '..';
     console.log(`Question: ${progression.join(' ')}`);
 
-    const answerUser = readlineSync.question('You answer: ');
+    const userAnswer = readlineSync.question('You answer: ');
 
-    if (answerUser === correctAnswer) {
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }

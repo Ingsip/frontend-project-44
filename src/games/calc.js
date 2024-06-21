@@ -10,8 +10,7 @@ export const gameCalc = () => {
     const number2 = getRandomNumber(1, 20);
     const getRandomSymbol = _.sample(['+', '-', '*']);
     console.log(`Question: ${number1} ${getRandomSymbol} ${number2}`);
-    const answerUser = readlineSync.question('Your answer: ');
-
+    const userAnswer = readlineSync.question('Your answer: ');
     let correctAnswer;
     switch (getRandomSymbol) {
       case '+':
@@ -24,10 +23,10 @@ export const gameCalc = () => {
         correctAnswer = (number1 * number2).toString();
         break;
       default:
-    } if (correctAnswer === answerUser) {
+    } if (correctAnswer === userAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }

@@ -17,13 +17,13 @@ export const gcdGame = () => {
     const number2 = getRandomNumber(0, 50);
     const question = `${number1} ${number2}`;
     console.log(`Question: ${question}`);
-    const answerUser = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = nod(number1, number2).toString();
-    if (correctAnswer === answerUser) {
+    if (correctAnswer === userAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }

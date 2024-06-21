@@ -18,13 +18,13 @@ export const gamePrime = () => {
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomNumber(1, 20);
     console.log(`Question: ${number}`);
-    const answerUser = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = (getPrime(number) === true) ? 'yes' : 'no';
-    if (correctAnswer.toString() === answerUser.toString()) {
+    if (correctAnswer.toString() === userAnswer.toString()) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }
