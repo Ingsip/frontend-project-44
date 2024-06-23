@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
+import { game, getRandomNumber } from '../index.js';
 
-import { startGame, getRandomNumber } from '../index.js';
+const task = 'What number is missing in the progression?';
 
 const arithmeticProgress = (firstNumber, step) => {
   const progressionLength = getRandomNumber(5, 10);
@@ -14,30 +14,18 @@ const arithmeticProgress = (firstNumber, step) => {
   return progression;
 };
 
-export const gameProgression = () => {
-  const name = startGame();
-  console.log('What number is missing in the progression?');
+const startProgressionGame = () => {
+  const firstNumber = getRandomNumber(0, 100);
+  const step = getRandomNumber(1, 10);
+  const progression = arithmeticProgress(firstNumber, step);
+  const randomIndex = Math.floor(Math.random() * progression.length);
+  const correctAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
 
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = getRandomNumber(0, 100);
-    const step = getRandomNumber(1, 10);
-    const progression = arithmeticProgress(firstNumber, step);
-    const randomIndex = Math.floor(Math.random() * progression.length);
-
-    const correctAnswer = String(progression[randomIndex]);
-
-    progression[randomIndex] = '..';
-    console.log(`Question: ${progression.join(' ')}`);
-
-    const userAnswer = readlineSync.question('You answer: ');
-
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
+  return [progression.join(' '), correctAnswer];
 };
-export default gameProgression;
+
+export const progressionGame = () => {
+  game(startProgressionGame, task);
+};
+export default progressionGame;
