@@ -21,9 +21,8 @@ $ sudo npm link
 $ brain-even
 ```
 
-##### Демонстрация:
+##### Демонстрация: [Игра: "Проверка на чётность"](https://asciinema.org/a/pa1dW2xemQ7gcum3ULxlT3NbO)
 
-[Игра: "Проверка на чётность"](https://asciinema.org/a/pa1dW2xemQ7gcum3ULxlT3NbO)
 
 ### Игра: "Калькулятор"
 
@@ -33,9 +32,8 @@ $ brain-even
 $ brain-calc
 ```
 
-##### Демонстрация:
+##### Демонстрация: [Игра: "Калькулятор"](https://asciinema.org/a/jkyHcGLXiHzd6YFsXB49Jj5pv)
 
-[Игра: "Калькулятор"](https://asciinema.org/a/jkyHcGLXiHzd6YFsXB49Jj5pv)
 
 ### Игра: "Наибольший общий делитель"
 
@@ -45,9 +43,8 @@ $ brain-calc
 $ brain-gcd
 ```
 
-##### Демонстрация:
+##### Демонстрация: [Игра: "Наибольший общий делитель (НОД)"](https://asciinema.org/a/7gvtMJaRgMSJsajNZUan1H0m0)
 
-[Игра: "Наибольший общий делитель (НОД)"](https://asciinema.org/a/7gvtMJaRgMSJsajNZUan1H0m0)
 
 ### Игра: "Арифметическая прогрессия"
 
@@ -57,9 +54,8 @@ $ brain-gcd
 $ brain-progression
 ```
 
-##### Демонстрация:
+##### Демонстрация: [Игра: "Арифметическая прогрессия"](https://asciinema.org/a/KHoOlcb51tAJRIG1U3s5Il7Yp)
 
-[Игра: "Арифметическая прогрессия"](https://asciinema.org/a/KHoOlcb51tAJRIG1U3s5Il7Yp)
 
 ### Игра: "Простое ли число?"
 
@@ -69,6 +65,4 @@ $ brain-progression
 $ brain-prime:
 ```
 
-##### Демонстрация:
-
-[Игра: "Простое ли число?"](https://asciinema.org/a/UAX76PHK3EiXQGAtwoJ2CuoPh)
+##### Демонстрация: [Игра: "Простое ли число?"](https://asciinema.org/a/UAX76PHK3EiXQGAtwoJ2CuoPh)
